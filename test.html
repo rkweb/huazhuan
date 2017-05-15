@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=725,target-densitydpi=device-dpi,user-scalable=no">
+	<style>
+		*{margin:0;padding: 0;}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="app" width="100%" height="100%"></canvas>
+	<script src="http://go.163.com/2015/public/common/js/zepto.min.js"></script>
+	<script>
+		var canvas = document.getElementById("app");
+		var ctx = canvas.getContext("2d");
+		var width =  window.innerWidth;
+		var height = window.innerHeight;
+		canvas.setAttribute("width", width);
+		canvas.setAttribute("height", height);
+		var image = new Image();
+		image.src="./image/2.jpg";
+		image.onload = function(){
+			ctx.drawImage(image,1379,103,375,603,0,0,750,1206);
+		}
+		
+	</script>
+</body>
+</html>
